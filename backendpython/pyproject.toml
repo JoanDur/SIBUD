@@ -1,0 +1,25 @@
+[project]
+name = "sibud_backend"
+version = "1.0.0"
+description = "Sistema de gestión de bibliotecas SIBUD."
+authors = [
+    {name = "Joan Sebastian Duran Pradilla", email = "tu_email@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.7,<0.116.0",
+    "uvicorn[standard]>=0.34.0,<0.35.0",
+    "python-dotenv>=1.0.1,<2.0.0",
+    "pydantic>=2.0.0,<3.0.0"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.3.4"
+pre-commit = "^4.1.0"
+pytest = "^8.3.4"
+black = "^25.1.0"

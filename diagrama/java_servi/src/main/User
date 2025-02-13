@@ -1,0 +1,38 @@
+public interface IUser {
+    String getUserId();
+    String getName(s);
+    String getEmail();
+    void receiveNotification(String message);
+}
+
+public class Usuario implements IUser {
+    private String userId;
+    private String name;
+    private String email;
+
+    public Usuario(String userId, String name, String email) {
+        this.userId = userId;
+        this.name = name;
+        this.email = email;
+    }
+
+    @Override
+    public String getUserId() {
+        return userId;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String getEmail() {
+        return email;
+    }
+
+    @Override
+    public void receiveNotification(String message) {
+        System.out.println("Notificación para " + name + ": " + message);
+    }
+}

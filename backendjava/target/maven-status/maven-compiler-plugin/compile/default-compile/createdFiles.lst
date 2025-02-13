@@ -1,0 +1,7 @@
+com\sibud\TestApplication.class
+com\sibud\controllers\UserController.class
+com\sibud\SIBUDApplication.class
+com\sibud\repositories\UserRepository.class
+com\sibud\models\UserModel.class
+com\sibud\repositories\UserRepository$1.class
+com\sibud\services\UserService.class

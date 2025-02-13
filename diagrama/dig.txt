@@ -1,0 +1,101 @@
+### 1. Principios SOLID y cómo se aplican:
+
+1. **S (Single Responsibility Principle - SRP)**: Cada clase tiene una única responsabilidad. Ejemplo: `Usuario` maneja datos del usuario, mientras que `GestorPrestamos` se encarga de gestionar préstamos.
+2. **O (Open/Closed Principle - OCP)**: Las clases deben estar abiertas a extensión pero cerradas a modificación. Ejemplo: Uso de `AbstractFactory` para crear diferentes tipos de usuarios sin modificar código existente.
+3. **L (Liskov Substitution Principle - LSP)**: Las subclases deben ser sustituibles por sus superclases sin alterar el comportamiento del programa. Ejemplo: `Administrador` y `Lector` heredan correctamente de `Usuario` sin modificar su funcionalidad base.
+4. **I (Interface Segregation Principle - ISP)**: No forzamos a clases a implementar métodos que no usan. Ejemplo: Se crean interfaces `IPrestamo`, `IUsuario` e `INotificacion` en lugar de una única interfaz grande.
+5. **D (Dependency Inversion Principle - DIP)**: Los módulos de alto nivel no dependen de módulos de bajo nivel, sino de abstracciones. Ejemplo: `GestorPrestamos` depende de una interfaz `IPrestamo`, no de una implementación específica.
+
+---
+
+### 2. Diagrama de clases para "Sibud"
+
+#### **Interfaces:**
+
+1. **IUsuario**
+   - `+registrarse() : void`
+
+2. **IPrestamo**
+   - `+registrarPrestamo(Prestamo) : void`
+   - `+procesarDevolucion(Prestamo) : void`
+
+3. **IMulta**
+   - `+calcularMulta(diasRetraso: int) : float`
+
+4. **INotificacion**
+   - `+enviarNotificacion(mensaje: String) : void`
+
+#### **Clases principales:**
+
+5. **Usuario (Abstract Class, Implementa IUsuario)**
+   - `+nombre: String`
+   - `+email: String`
+   - `+registrarse() : void`
+
+6. **Lector (Extiende Usuario)**
+   - `+solicitarPrestamo(Libro) : void`
+   - `+renovarPrestamo(Prestamo) : void`
+
+7. **Administrador (Extiende Usuario)**
+   - `+gestionarInventario(Libro) : void`
+   - `+gestionarUsuarios(Usuario) : void`
+   - `+verEstadisticas() : void`
+
+8. **Libro**
+   - `+titulo: String`
+   - `+autor: String`
+   - `+estado: String` (Disponible/Prestado)
+
+9. **CatalogoLibros (Singleton)**
+   - `-libros: List<Libro>` (Agregación con `Libro`)
+   - `+buscarLibro(titulo: String) : Libro`
+   - `+getInstancia() : CatalogoLibros`
+
+10. **GestorPrestamos (Singleton, Implementa IPrestamo)**
+   - `-instancia: GestorPrestamos`
+   - `+registrarPrestamo(Prestamo) : void`
+   - `+procesarDevolucion(Prestamo) : void`
+   - `+getInstancia() : GestorPrestamos`
+
+11. **Prestamo (Factory Method)**
+   - `+usuario: Usuario`
+   - `+libro: Libro`
+   - `+fechaPrestamo: Date`
+   - `+fechaDevolucion: Date`
+
+12. **HistorialPrestamos**
+   - `-prestamos: List<Prestamo>`
+   - `+registrarPrestamo(Prestamo) : void`
+   - `+consultarHistorial(Usuario) : List<Prestamo>`
+
+13. **MultaRetraso (Implementa IMulta)**
+   - `+calcularMulta(diasRetraso: int) : float`
+
+14. **FabricaUsuario (Abstract Factory)**
+   - `+crearUsuario(tipo: String) : Usuario`
+
+15. **ProxyGestorPrestamos (Proxy, Implementa IPrestamo)**
+   - `+registrarPrestamo(Prestamo) : void`
+   - `+procesarDevolucion(Prestamo) : void`
+
+16. **AdapterNotificacion (Adapter, Implementa INotificacion)**
+   - `+enviarNotificacion(mensaje: String) : void`
+
+---
+
+### 3. Patrones Implementados
+
+1. **Singleton**: `GestorPrestamos` y `CatalogoLibros` aseguran una única instancia para gestionar préstamos y libros respectivamente.
+2. **Factory Method**: `PrestamoFactory` crea diferentes tipos de préstamos sin modificar la lógica base.
+3. **Abstract Factory**: `FabricaUsuario` permite la creación de `Administrador` o `Lector` sin modificar código existente.
+4. **Proxy**: `ProxyGestorPrestamos` controla el acceso a `GestorPrestamos`, mejorando la seguridad y control de préstamos.
+5. **Adapter**: `AdapterNotificacion` permite adaptar distintos servicios de notificación sin modificar el código principal.
+6. **Agregación**: `CatalogoLibros` contiene libros, pero estos pueden existir sin el catálogo.
+7. **Composición**: `HistorialPrestamos` depende fuertemente de `Prestamo`, ya que no puede existir sin él.
+8. **Segregación de Interfaces**: Se usan `IPrestamo`, `IUsuario` e `INotificacion` para evitar que las clases implementen métodos innecesarios.
+
+---
+
+Con estos cambios, se mejora la flexibilidad del sistema y se refuerza la implementación de SOLID. ¿Te gustaría agregar alguna otra funcionalidad o interfaz? 🚀📚
+
+
