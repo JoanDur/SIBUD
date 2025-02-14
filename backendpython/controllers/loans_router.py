@@ -6,7 +6,7 @@ Author: [Joan Sebastian Duran Pradilla <<jsduranp@udistrita.edu.co>> ]
 """
 from fastapi import APIRouter, HTTPException
 from typing import List
-from backendpython.models.loans import LoanDTO
+from models.loans import LoanDTO
 from services.loans_service import LoanService
 
 router = APIRouter()

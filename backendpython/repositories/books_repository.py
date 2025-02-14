@@ -2,26 +2,23 @@ from typing import List
 from models.books import BookDTO
 
 class BookRepository:
+    def __init__(self):
+        self.books = []
+
     def get_all_books(self) -> List[BookDTO]:
-        # Implementación para obtener todos los libros
-        pass
+        return self.books
 
     def get_by_title(self, title: str) -> List[BookDTO]:
-        # Implementación para obtener libros por título
-        pass
+        return [book for book in self.books if book.title == title]
 
     def get_by_author(self, author: str) -> List[BookDTO]:
-        # Implementación para obtener libros por autor
-        pass
+        return [book for book in self.books if book.author == author]
 
     def get_by_category(self, category: str) -> List[BookDTO]:
-        # Implementación para obtener libros por categoría
-        pass
+        return [book for book in self.books if book.category == category]
 
     def add_book(self, book: BookDTO):
-        # Implementación para añadir un libro
-        pass
+        self.books.append(book)
 
     def remove_book(self, isbn: str):
-        # Implementación para eliminar un libro por ISBN
-        pass
+        self.books = [book for book in self.books if book.isbn != isbn]

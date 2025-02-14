@@ -1,0 +1,212 @@
+[
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-13",
+        "return_date": "2025-02-13",
+        "returned": true
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-13",
+        "return_date": "2025-02-13",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-13",
+        "return_date": "2025-02-13",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-13",
+        "return_date": "2025-02-13",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-13",
+        "return_date": "2025-02-13",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-13",
+        "return_date": "2025-02-13",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-13",
+        "return_date": "2025-02-13",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-13",
+        "return_date": "2025-02-13",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-13",
+        "return_date": "2025-02-13",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-13",
+        "return_date": "2025-02-13",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-13",
+        "return_date": "2025-02-13",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-13",
+        "return_date": "2025-02-13",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-13",
+        "return_date": "2025-02-13",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-13",
+        "return_date": "2025-02-13",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-13",
+        "return_date": "2025-02-13",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-13",
+        "return_date": "2025-02-13",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-14",
+        "return_date": "2025-02-14",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-14",
+        "return_date": "2025-02-14",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-14",
+        "return_date": "2025-02-14",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-14",
+        "return_date": "2025-02-14",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-14",
+        "return_date": "2025-02-14",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-14",
+        "return_date": "2025-02-14",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-14",
+        "return_date": "2025-02-14",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-14",
+        "return_date": "2025-02-14",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-14",
+        "return_date": "2025-02-14",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-14",
+        "return_date": "2025-02-14",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-14",
+        "return_date": "2025-02-14",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-14",
+        "return_date": "2025-02-14",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-14",
+        "return_date": "2025-02-14",
+        "returned": false
+    },
+    {
+        "user_id": "1",
+        "book_isbn": "12345",
+        "loan_date": "2025-02-14",
+        "return_date": "2025-02-14",
+        "returned": false
+    }
+]

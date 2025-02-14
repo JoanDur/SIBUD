@@ -6,7 +6,7 @@ Author: [Joan Sebastian Duran Pradilla <<jsduranp@udistrital.edu.co>>]
 """
 import json
 from typing import List
-from backendpython.models.loans import LoanDTO
+from models.loans import LoanDTO
 from environment_variables import EnvironmentVariables
 
 class LoanRepository:

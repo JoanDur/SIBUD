@@ -4,7 +4,7 @@ Author: Joan Sebastian Duran Pradilla
 """
 
 from fastapi import FastAPI
-from controllers import books_router, fines_router, loans_router, notifications_router
+from backendpython.controllers import books_router, fines_router, loans_router, notifications_router
 
 app = FastAPI(
     title="SIBUD - Library Management System",

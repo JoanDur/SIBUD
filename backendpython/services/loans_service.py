@@ -5,7 +5,7 @@ Handles the business logic for loans.
 Author: [Joan Sebastian Duran Pradilla <<jsduranp@udistirtal.edu.co >>]
 """
 from typing import List
-from backendpython.models.loans import LoanDTO
+from models.loans import LoanDTO
 from repositories.loans_repository import LoanRepository
 
 class LoanService:
@@ -23,3 +23,5 @@ class LoanService:
 
     def return_book(self, book_isbn: str) -> bool:
         return self.repository.mark_as_returned(book_isbn)
+    def get_all_loans(self):
+        return self.add_loan or []

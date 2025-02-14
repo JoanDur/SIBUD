@@ -1,10 +1,3 @@
-"""Fine Repository.
-
-Handles the data storage and retrieval for fines.
-
-Author: [Joan Sebastian Duran Pradilla <<jsduranp@udistrita.edu.co>>]
-"""
-
 import json
 from typing import List
 from backendpython.models.fines import FineDTO
@@ -30,15 +23,24 @@ class FineRepository:
         return [FineDTO(**fine) for fine in self.data if fine["user_id"] == user_id]
 
     def add_fine(self, fine: FineDTO):
-        self.data.append(fine.dict())
+        self.data.append(fine.model_dump())
         self._save_data()
 
     def mark_as_paid(self, loan_id: str):
+        found = False
         for fine in self.data:
             if fine["loan_id"] == loan_id:
                 fine["paid"] = True
-                self._save_data()
-                break
+                found = True
+        
+        if found:
+            self._save_data()
+        else:
+            print(f"No se encontró multa con loan_id: {loan_id}")
+
+    def clear_all_fines(self):
+        self.data = []
+        self._save_data()
 
     def _save_data(self):
         with open(self.path_file, "w", encoding="utf-8") as f:

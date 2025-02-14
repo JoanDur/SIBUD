@@ -9,6 +9,6 @@ from datetime import date
 class LoanDTO(BaseModel):
     user_id: str
     book_isbn: str
-    loan_date: date
-    return_date: date
+    loan_date: str
+    return_date: str
     returned: bool
